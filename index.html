@@ -185,7 +185,18 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
-
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCzngJ-nlpO6QWSRAWzmgAQWB_iemRzM-Y",
+    authDomain: "crunchfi.firebaseapp.com",
+    databaseURL: "https://crunchfi.firebaseio.com",
+    storageBucket: "crunchfi.appspot.com",
+    messagingSenderId: "676141488719"
+  };
+  firebase.initializeApp(config);
+</script>
 </body>
 </html>
 
