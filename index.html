@@ -130,7 +130,13 @@
   			font-size: 15px;
   			color: #404040;
 				outline: none;
+				opacity: 1;
+				transition: 0.5s;
+				-webkit-transition: 0.5s;
 			}
+	.url:readonly {
+		opacity: 0.6;
+	}
 			.appIcon {
 				width: 65px;
 				height: 65px;
@@ -204,6 +210,9 @@ function showPage() {
 	btnCh.addEventListener("click", e => {
 		btnCh.innerHTML = "Please Wait...";
 		btnCh.disabled = true;
+		txtDom.readonly = true;
+		txtTar.readonly = true;
+		txtMes.readonly = true;
 	});
 </script>
 </body>
