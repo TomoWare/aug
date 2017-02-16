@@ -134,7 +134,7 @@
 				transition: 0.5s;
 				-webkit-transition: 0.5s;
 			}
-	.url:readonly {
+	.url:disabled {
 		opacity: 0.6;
 	}
 			.appIcon {
@@ -210,9 +210,9 @@ function showPage() {
 	btnCh.addEventListener("click", e => {
 		btnCh.innerHTML = "Please Wait...";
 		btnCh.disabled = true;
-		txtDom.readonly = true;
-		txtTar.readonly = true;
-		txtMes.readonly = true;
+		txtDom.disabled = true;
+		txtTar.disabled = true;
+		txtMes.disabled = true;
 	});
 </script>
 </body>
