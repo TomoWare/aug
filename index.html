@@ -173,7 +173,7 @@
 				<input class="chObj url" type="text" id="mes" placeholder="Message your friend"><br>
 			</details>
 			<br>
-			<button class="chObj btn" id="btnGetChunk">Connect</button><br>
+			<button class="chObj btn" id="btnGetChunk" onclick="chFormDisable()">Connect</button><br>
 		</div>
 		<script>
 			//TODO;
@@ -214,6 +214,13 @@ function showPage() {
 		txtTar.disabled = true;
 		txtMes.disabled = true;
 	});
+	function chFormDisable() {
+		btnCh.innerHTML = "Please Wait...";
+		btnCh.disabled = true;
+		txtDom.disabled = true;
+		txtTar.disabled = true;
+		txtMes.disabled = true;
+	}
 </script>
 </body>
 </html>
