@@ -180,48 +180,57 @@
 		</script>
 </div>
 
-<script>
-var myVar;
+	<script>
+		var myVar;
 
-function myFunction() {
-    myVar = setTimeout(showPage, 2000);
-}
+		function myFunction() {
+		    myVar = setTimeout(showPage, 2000);
+		}
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
-<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCzngJ-nlpO6QWSRAWzmgAQWB_iemRzM-Y",
-    authDomain: "crunchfi.firebaseapp.com",
-    databaseURL: "https://crunchfi.firebaseio.com",
-    storageBucket: "crunchfi.appspot.com",
-    messagingSenderId: "676141488719"
-  };
-  firebase.initializeApp(config);
-	const txtDom = document.getElementById("dom");
-	const txtTar = document.getElementById("tar");
-	const txtMes = document.getElementById("mes");
-	const btnCh = document.getElementById("btnGetChunk");
-	btnCh.addEventListener("click", e => {
-		btnCh.innerHTML = "Please Wait...";
-		btnCh.disabled = true;
-		txtDom.disabled = true;
-		txtTar.disabled = true;
-		txtMes.disabled = true;
-	});
-	function chFormDisable() {
-		btnCh.innerHTML = "Please Wait...";
-		btnCh.disabled = true;
-		txtDom.disabled = true;
-		txtTar.disabled = true;
-		txtMes.disabled = true;
-	}
-</script>
+		function showPage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCzngJ-nlpO6QWSRAWzmgAQWB_iemRzM-Y",
+	    authDomain: "crunchfi.firebaseapp.com",
+	    databaseURL: "https://crunchfi.firebaseio.com",
+	    storageBucket: "crunchfi.appspot.com",
+	    messagingSenderId: "676141488719"
+	  };
+	  firebase.initializeApp(config);
+		const txtDom = document.getElementById("dom");
+		const txtTar = document.getElementById("tar");
+		const txtMes = document.getElementById("mes");
+		const btnCh = document.getElementById("btnGetChunk");
+		btnCh.addEventListener("click", e => {
+			btnCh.innerHTML = "Please Wait...";
+			btnCh.disabled = true;
+			txtDom.disabled = true;
+			txtTar.disabled = true;
+			txtMes.disabled = true;
+		});
+		function chFormDisable() {
+			btnCh.innerHTML = "Please Wait...";
+			btnCh.disabled = true;
+			txtDom.disabled = true;
+			txtTar.disabled = true;
+			txtMes.disabled = true;
+		}
+	</script>
+	<script>
+		window.onbeforeunload = function(){
+		   alert("Changes not saved");
+		}
+		// OR
+		window.addEventListener("beforeunload", function(e){
+		   alert("Changes not saved");
+		}, false);
+	</script>
 </body>
 </html>
 
